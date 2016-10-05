@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+'use strict';
+
+const path        = require('path');
+const ServerProxy = require('./server-proxy');
+
+// Pass the config file to the server
+const conf  = path.resolve(process.cwd(), process.argv[2] || './config-proxy');
+const server = new ServerProxy(require(conf));
+server.serve();

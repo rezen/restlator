@@ -1,0 +1,14 @@
+{
+  "ignore" : [],
+  "ignoreDefs" : ["**/external/**", "**/auth/**"],
+  "params": {
+    "uid" : {
+      "pattern": "^[a-f\\d]{24}$",
+      "type":"string"
+    },
+    "id" : {
+      "pattern": "^[0-9]+$",
+      "type":"string"
+    }
+  }
+}

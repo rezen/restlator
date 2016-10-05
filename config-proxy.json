@@ -1,0 +1,15 @@
+{
+  "mask" : [],
+  "ignore" : [
+    "* /assets/**",
+    "* /tarballs/**"
+  ],
+  "overwrite": false,
+  "target":"https://192.168.22.10",
+  "secure": false,
+  "cookieDomainRewrite": "localhost:8005",
+  "ssl": {
+    "key": "./certs/privkey.pem",
+    "cert": "./certs/fullchain.pem"
+  }
+}
