@@ -17,5 +17,7 @@
 
 #### Other
 If you need to setup certs for node, checkout link
+`openssl req -newkey rsa:2048 -nodes -keyout ./certs/key.pem -x509 -days 365 -out ./certs/certificate.pem`
+
 - https://github.com/coolaj86/node-ssl-root-cas
 
