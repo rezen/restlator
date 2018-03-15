@@ -95,6 +95,8 @@ class ServerProxy {
       }
     }
 
+    config.changeOrigin = true;
+    config.autoRewrite = true;
     config.port = config.port || 8005;
     return config;
   }
@@ -132,6 +134,7 @@ class ServerProxy {
   serve() {
     this.hooks(this.proxy);
     this.proxy.listen(this.config.port);
+    console.log(`[i] Target is ${this.config.target}`);
     console.log('[i] Listening on ' + this.config.port);
   }
 }
