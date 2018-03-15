@@ -1,6 +1,7 @@
 'use strict';
 
 const url          = require('url');
+const zlib         = require("zlib");
 const querystring  = require('querystring');
 const EventEmitter = require('eventemitter2').EventEmitter2;
 
@@ -51,6 +52,13 @@ class Tape extends EventEmitter {
 
     const self = this;
     self.isRecording = true;
+    const isZipped = (self.data.res.headers['content-encoding'] === 'gzip');
+    
+    if (isZipped) {
+     let gunzip = zlib.createGunzip();
+      proxied.pipe(gunzip);
+      proxied = gunzip;
+    }
 
     proxied.on('data', chunk => self.data.res.body += chunk);
     proxied.on('end', () => {
