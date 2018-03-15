@@ -1,6 +1,6 @@
 {
   "name": "rest-lator",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {},
@@ -10,7 +10,7 @@
     "async": "^2.0.1",
     "eventemitter2": "^2.1.3",
     "glob": "^7.0.6",
-    "http-proxy": "^1.14.0",
+    "http-proxy": "^1.16.2",
     "inflection": "^1.10.0",
     "lodash": "^4.15.0",
     "minimatch": "^3.0.3",
